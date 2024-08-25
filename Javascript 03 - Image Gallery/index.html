@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery-btn">
+            <img src="/images/back.png" alt="backBtn" id="backBtn">
+            <div class="gallery-container">
+                <div class="gallery">
+                    <img src="/images/Kento Nanami.jpeg" alt="Kento Nanami">
+                    <img src="/images/Megumi Fushiguro.jpeg" alt="Megumi Fushiguro">
+                    <img src="/images/Satoru Gojo.jpeg" alt="Satoru Gojo">
+                </div>
+                <div class="gallery">
+                    <img src="/images/Suguru Geto.jpeg" alt="Suguru Geto">
+                    <img src="/images/Toji Fushiguro.jpeg" alt="Toji Fushiguro">
+                    <img src="/images/Yuji Itadori.jpeg" alt="Yuji Itadori">
+                </div>
+            </div>
+            <img src="/images/next.png" alt="nextBtn" id="nextBtn">
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="modal">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gallery-container {
+    flex-grow: 2;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+    padding: 15px 8px 15px 8px;
+    flex: none;
+}
+
+.gallery img {
+    filter: grayscale(1);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    object-fit: cover;
+    aspect-ratio: 1 / 1.5;
+}
+
+.gallery img:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#backBtn,
+#nextBtn {
+    width: 50px;
+    margin: 20px;
+    cursor: pointer;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.gallery-btn img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    position: relative;
+    width: 400px;
+    max-height: 90%;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    color: white;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .gallery-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #backBtn,
+    #nextBtn {
+        margin: 10px 0;
+    }
+
+    .modal {
+        max-width: 50%;
+    }
+
+}

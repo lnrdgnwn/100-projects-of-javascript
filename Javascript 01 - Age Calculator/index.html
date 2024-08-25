@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="card">
+                <div class="title">
+                    <h4>Age Calculator</h4>
+                </div>
+                <div class="block-container">
+                    <div class="block">
+                        <p class="option">Date</p>
+                        <input type="text" name="date" id="date" placeholder="dd" required="required" minlength="1"
+                            maxlength="2">
+                    </div>
+                    <div class="block">
+                        <p class="option">Month</p>
+                        <input type="text" name="date" id="month" placeholder="mm" required="required" minlength="1"
+                            maxlength="2">
+                    </div>
+                    <div class="block">
+                        <p class="option">Year</p>
+                        <input type="text" name="date" id="year" placeholder="yyyy" required="required" minlength="4"
+                            maxlength="4">
+                    </div>
+                </div>
+                <div class="enter">
+                    <input type="button" id="tSubmit" name="submit" value="Submit">
+                </div>
+                <div class="age">
+                    <p id="age">Input Your Birthday Date First</p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

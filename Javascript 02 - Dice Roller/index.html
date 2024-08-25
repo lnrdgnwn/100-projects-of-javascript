@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="title">Dice Roller</h2>
+        <form>
+            <p>
+                You can use this form to roll virtual dice, and the randomness of the rolls comes from atmospheric
+                noise. This source of randomness is typically viewed as better than the pseudo-random number
+                algorithms
+                that are frequently used in computer programs.
+            </p>
+            <div class="dice-container">
+                <p id="dice"></p>
+            </div>
+            <div class="container2">
+                Roll
+                <select id="num">
+                    <option value="1">1</option>
+                    <option value="2" selected="selected">2</option>
+                    <option value="3">3</option>
+                    <option value="4" X>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                virtual dice.
+            </div>
+            <p>
+                <input type="button" id="rollDice" value="Roll Dice">
+                <input type="reset" value="Reset">
+            </p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
