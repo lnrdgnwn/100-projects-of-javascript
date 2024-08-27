@@ -5,25 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battery Device</title>
-    <link rel="stylesheet" href="input.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
 </head>
 
-<body>
-    <div>
-        <div class="BatteryCard">
-            <div class="BatteryPill">
+<body class="bg-[#070707] text-white">
+    <div class="min-h-screen flex justify-center items-center">
+        <div class="BatteryCard bg-[#222] flex flex-row  p-8 rounded-3xl ">
+            <div
+                class="BatteryPill overflow-hidden rounded-full shadow-[inset_20px_0_48px_hsl(0,0%,16%),_inset_-4px_12px_48px_hsl(0,0%,56%)]  border-4 w-24 h-52 mr-5">
                 <div class="BatteryLevel">
-                    <div class="batteryLiquid">
-
+                    <div class="BatteryLiquid">
                     </div>
                 </div>
             </div>
-            <div class="BatteryData">
-                <p class="BatteryTexct">Battery : </p>
-                <h1 class=""></h1>
+            <div class="BatteryData flex flex-col justify-center mx-10">
+                <p class="BatteryText text-3xl">Battery : </p>
+                <h1 class="BatteryPercentage text-3xl"> 20%</h1>
+                <p class="hidden BatteryStatus pt-4 ">
+                    <i class="ri-battery-charge-fill text-3xl"></i>
+                </p>
             </div>
         </div>
     </div>
+
 
     <script src="script.js"></script>
 </body>
