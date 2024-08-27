@@ -1,7 +1,7 @@
-const redColor = 'red-gradient';
-const orangeColor = 'orange-gradient';
-const yellowColor = 'yellow-gradient';
-const greenColor = 'green-gradient';
+const redColor = 'linear-gradient(90deg, hsl(7, 89%, 46%) 15%, hsl(11, 93%, 68%) 100%)';
+const orangeColor = 'linear-gradient(90deg, hsl(22, 89%, 46%) 15%, hsl(54, 90%, 68%) 100%)';
+const yellowColor = 'linear-gradient(90deg, hsl(54, 89%, 46%) 15%, hsl(92, 90%, 45%) 100%)';
+const greenColor = 'linear-gradient(90deg, hsl(92, 89%, 46%) 15%, hsl(92, 90%, 68%) 100%)';
 
 Battery();
 
@@ -12,13 +12,13 @@ function Battery() {
 
     navigator.getBattery().then((batt) => {
         updateBattery = () => {
-            let bLevel = Math.floor(batt.bLevel * 100);
-            batteryPercentage.innerHTML = bLevel + "%";
-            batteryLiquid.style.height = `${parseInt(batt.bLevel * 100)}%`;
-            if (bLevel == 100) {
+            let level = Math.floor(batt.level * 100);
+            batteryPercentage.innerHTML = level + "%";
+            batteryLiquid.style.height = `${parseInt(batt.level * 100)}%`;
+            if (level == 100) {
                 batteryStatus.innerHTML = `Battery Full <i class="ri-battery-2-fill green-color"></i>`;
                 batteryLiquid.style.height = "103%";
-            } else if (bLevel <= 20 & !batt.charging) {
+            } else if (level <= 20 & !batt.charging) {
                 batteryStatus.innerHTML = `Low Charge <i class="ri-plug-line animated-red animated-red"></i>`;
             } else if (batt.charging) {
                 batteryStatus.classList.remove("hidden");
@@ -27,19 +27,16 @@ function Battery() {
                 batteryStatus.innerHTML = "";
             }
 
-            if (bLevel <= 20) {
-                batteryLiquid.classList.add(redColor);
-                batteryLiquid.classList.remove("greenColor", "orangeColor", "yellowColor");
-            } else if (bLevel <= 48) {
-                batteryLiquid.classList.add("orangeColor");
-                batteryLiquid.classList.remove("greenColor", redColor, "yellowColor");
-            } else if (bLevel <= 80) {
-                batteryLiquid.classList.add("yellowColor");
-                batteryLiquid.classList.remove("greenColor", "orangeColor", redColor);
+            if (level <= 20) {
+                batteryLiquid.style.backgroundImage = redColor;
+            } else if (level <= 48) {
+                batteryLiquid.style.backgroundImage = orangeColor;
+            } else if (level <= 80) {
+                batteryLiquid.style.backgroundImage = yellowColor;
             } else {
-                batteryLiquid.classList.add("greenColor");
-                batteryLiquid.classList.remove(redColor, "orangeColor", "yellowColor");
+                batteryLiquid.style.backgroundImage = greenColor;
             }
+
 
         }
         updateBattery();

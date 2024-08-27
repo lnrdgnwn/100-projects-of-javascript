@@ -11,24 +11,22 @@
 
 <body class="bg-[#070707] text-white">
     <div class="min-h-screen flex justify-center items-center">
-        <div class="BatteryCard bg-[#222] flex flex-row  p-8 rounded-3xl ">
+        <div class="BatteryCard bg-[#222] flex flex-row p-8 rounded-3xl">
             <div
-                class="BatteryPill overflow-hidden rounded-full shadow-[inset_20px_0_48px_hsl(0,0%,16%),_inset_-4px_12px_48px_hsl(0,0%,56%)]  border-4 w-24 h-52 mr-5">
-                <div class="BatteryLevel">
-                    <div class="BatteryLiquid">
-                    </div>
+                class="BatteryPill relative overflow-hidden rounded-full shadow-[inset_20px_0_48px_hsl(0,0%,16%),_inset_-4px_12px_48px_hsl(0,0%,56%)] border-4 w-24 h-52 mr-5">
+                <div class="BatteryLevel relative w-full h-full">
+                    <div class="BatteryLiquid absolute bottom-0 left-0 right-0 w-full h-full"></div>
                 </div>
             </div>
             <div class="BatteryData flex flex-col justify-center mx-10">
-                <p class="BatteryText text-3xl">Battery : </p>
-                <h1 class="BatteryPercentage text-3xl"> 20%</h1>
-                <p class="hidden BatteryStatus pt-4 ">
+                <p class="BatteryText text-3xl">Battery:</p>
+                <h1 class="BatteryPercentage text-3xl">20%</h1>
+                <p class="hidden BatteryStatus pt-4">
                     <i class="ri-battery-charge-fill text-3xl"></i>
                 </p>
             </div>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
