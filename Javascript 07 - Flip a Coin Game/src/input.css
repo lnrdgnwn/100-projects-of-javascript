@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes spinX {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(2160deg); }
+  }
+
+  @keyframes reverseSpinX {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(-2160deg); }
+  }
+
+  .animate-spinX {
+    animation: spinX 0.5s ease-in-out forwards;
+  }
+
+  .animate-reverseSpinX {
+    animation: reverseSpinX 0.5s ease-in-out forwards;
+  }
+}

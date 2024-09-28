@@ -3,32 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet">
-    <title>Flip a Coin Game</title>
+    <title>Flip Coin</title>
+    <link rel="stylesheet" href="./output.css">
 </head>
 
-<body class="bg-gradient-to-r from-indigo-600 to-gray-100 h-screen flex items-center justify-center">
-    <div class="container bg-white p-8 rounded-lg shadow-lg w-[400px]">
-        <div class="stats text-right text-gray-800">
-            <p id="heads-count">Heads: 0</p>
-            <p id="tails-count">Tails: 0</p>
-        </div>
-
-        <div class="coin relative w-40 h-40 mx-auto perspective">
-            <div class="face heads w-full h-full absolute backface-hidden">
-                <img src="../assets/heads.svg" class="w-full h-full" alt="Heads">
+<body class="bg-gradient-to-r from-blue-500 to-blue-300">
+    <div class="flex justify-center items-center h-screen">
+        <div class="flex flex-col w-[400px] p-[50px] bg-white rounded-lg shadow-lg transition-transform transform">
+            <div class="flex flex-col text-right mb-6">
+                <p id="heads-count" class="text-lg font-semibold text-gray-800">Heads : 0</p>
+                <p id="tails-count" class="text-lg font-semibold text-gray-800">Tails : 0</p>
             </div>
-            <div class="face tails w-full h-full absolute backface-hidden">
-                <img src="../assets/tails.svg" class="w-full h-full" alt="Tails">
-            </div>
-        </div>
 
-        <div class="buttons flex justify-between mt-5">
-            <button id="flip-button" class="bg-indigo-600 text-white p-2 rounded-md">Flip Coin</button>
-            <button id="reset-button"
-                class="bg-white text-indigo-600 border border-indigo-600 p-2 rounded-md">Reset</button>
+            <div class="coin relative flex flex-col items-center h-full pb-3 w-full mb-6">
+                <div class="heads cursor-pointer transition-transform duration-500">
+                    <img src="../assets/heads.svg" alt="heads" class="w-full h-full">
+                </div>
+                <div class="tails cursor-pointer hidden transition-transform duration-500">
+                    <img src="../assets/tails.svg" alt="tails" class="w-full h-full">
+                </div>
+            </div>
+
+            <div class="flex flex-row gap-4 justify-center">
+                <button id="btn-flip"
+                    class="w-[150px] p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                    Flip Coin!
+                </button>
+                <button id="btn-reset"
+                    class="w-[150px] p-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    Reset
+                </button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
