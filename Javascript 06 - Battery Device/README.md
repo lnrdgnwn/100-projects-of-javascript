@@ -2,4 +2,4 @@
 
 Screenshot :
 
-![Image](./Javascript%2006%20-%20Battery%20Device/assets/img/image.jpg)
+![Image](https://github.com/lnrdgnwn/100-projects-of-javascript/blob/main/Javascript%2006%20-%20Battery%20Device/assets/img/image.jpg)
