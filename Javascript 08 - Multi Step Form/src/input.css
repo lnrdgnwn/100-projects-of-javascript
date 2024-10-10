@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gray-100 flex justify-center items-center min-h-screen;
+    }
+}
+
+@layer components {
+    #progress {
+        width: 0%;
+        height: 4px;
+        @apply bg-indigo-600 transition-all ease-in-out duration-300;
+    }
+
+    .step-row {
+        @apply flex justify-between mt-6;
+    }
+
+    .step-col {
+        @apply text-center;
+    }
+}
+
+@layer utilities {
+    .btn-box {
+        @apply flex justify-end space-x-4;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        @apply w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500;
+    }
+
+    .btn-back {
+        @apply bg-gray-600 text-white px-4 py-2 rounded-md;
+    }
+
+    .btn-next {
+        @apply bg-indigo-600 text-white px-4 py-2 rounded-md;
+    }
+}
